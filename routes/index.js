@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 const stati = [
-  // 'notScanned',
-  // 'isComplete',
+  'notScanned',
+  'isComplete',
   'inProgress',
   'isVirus',
 ]
