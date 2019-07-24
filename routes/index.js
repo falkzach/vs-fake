@@ -26,17 +26,19 @@ router.post('/files', function(req, res) {
       timestamp: 'the time',
     }
   })
-  // let status = {...files.map(guid => { 
-  //     return { 
-  //       [guid]: {
-  //         status: randomStati(),
-  //         timestamp: 'the time'
-  //       } 
-  //     } 
-  //   })
-  // }
+
   console.log(status)
   res.send(status)
+})
+
+router.post('/scan', function(req, res) {
+  var data = req.body
+  let response = {
+    status: "OK",
+  }
+
+  console.log(data)
+  res.send(response)
 })
 
 module.exports = router;
