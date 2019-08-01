@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/files', function(req, res) {
+router.post('/areInfected', function(req, res) {
   var files = req.body.files
   let status = {}
   files.forEach(guid => {
@@ -31,7 +31,7 @@ router.post('/files', function(req, res) {
   res.send(status)
 })
 
-router.post('/scan', function(req, res) {
+router.post('/events', function(req, res) {
   var data = req.body
   let response = {
     status: "OK",
